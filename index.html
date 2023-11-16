@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Aplicación de Geolocalización</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body id="body">
+    <header id="header" class="header">
+        <h1 class="header__title">Aplicación de Geolocalización</h1>
+        <button id="button-switch-mode" class="search-button" aria-label="Cambiar Tema"><i class="fa-regular fa-moon"></i></button>
+    </header>
+    <main class="parent-container">
+        <div class="map" id="map"></div>
+        <section class="container">
+            <form id="search-form" class="search-form">
+                <input type="text" id="ip-input" class="search-input" placeholder="Buscar por IP">
+                <button type="submit" class="search-button" aria-label="Buscar"><i class="fa-solid fa-magnifying-glass-location"></i></button>
+            </form>
+            <div class="metadata" id="location-info">
+                <div class="metadata-item">
+                    <p class="metadata-label">País</p>
+                    <p class="metadata-value" id="country"></p>
+                </div>
+                <div class="metadata-item">
+                    <p class="metadata-label">Región</p>
+                    <p class="metadata-value" id="region"></p>
+                </div>
+                <div class="metadata-item">
+                    <p class="metadata-label">Ciudad</p>
+                    <p class="metadata-value" id="city"></p>
+                </div>
+                <div class="metadata-item">
+                    <p class="metadata-label">Postal</p>
+                    <p class="metadata-value" id="postal"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer" id="footer">
+        <p class="footer__title">Derechos reservados a Esteban Gómez V-30.189.699</p>
+    </footer>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
